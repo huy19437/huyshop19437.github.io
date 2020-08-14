@@ -531,8 +531,8 @@
 } 
 
 .header__cart{
-    width: 150px;
-    text-align: center;
+    width: 80px;
+    text-align: right;
 }
 
 .header__cart-wrap:hover .header__cart-list{
@@ -622,7 +622,7 @@
 .header__cart-list-item{
     padding-left: 0;
     list-style: none;
-    height: 40vh;
+    max-height: 40vh;
     overflow-y: auto;
 }
 
@@ -700,6 +700,10 @@
 .header__cart-item-remove{
     color: var(--text-color);
     font-size: 1.4rem;
+}
+
+.header__cart-item-remove-icon{
+    display: none;
 }
 
 .header__cart-item-remove:hover{

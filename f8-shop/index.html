@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyen Duc Huy</title>
+    <title>F8-Shop</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=vietnamese">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.13.1/fontawesome-free-5.13.1/css/all.min.css">
 </head>
 
@@ -18,8 +20,8 @@
     <!-- BEM: Block Element Modifier -->
     <div class="app">
         <header class="header">
-            <div class="grid">
-                <nav class="header__navbar">
+            <div class="grid wide">
+                <nav class="header__navbar hide-on-mobile-tablet">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">
                             Vào cửa hàng trên ứng dụng F8-Shop
@@ -128,7 +130,7 @@
 
                 <!-- Header with search -->
                 <div class="header-with-search">
-                    <div class="header__logo">
+                    <div class="header__logo hide-on-tablet">
                         <a href="./index.html" class="header__logo-link">
                             <svg class="header__logo-img" viewBox="0 0 192 65">
                                 <g fill-rule="evenodd">
@@ -211,7 +213,12 @@
                                                 <span class="header__cart-item-description">
                                                     Phân loại: Bạc
                                                 </span>
-                                                <span class="header__cart-item-remove">Xoá</span>
+                                                <span class="header__cart-item-remove">
+                                                    <span class="hide-on-mobile-tablet">Xoá</span>
+                                                    <div class="header__cart-item-remove-icon">
+                                                        <i class="fas fa-trash"></i>
+                                                    </div>
+                                                </span>
                                             </div>
                                         </div>
                                     </li>
@@ -230,7 +237,12 @@
                                                 <span class="header__cart-item-description">
                                                     Phân loại: Bạc
                                                 </span>
-                                                <span class="header__cart-item-remove">Xoá</span>
+                                                <span class="header__cart-item-remove">
+                                                    <span class="hide-on-mobile-tablet">Xoá</span>
+                                                    <div class="header__cart-item-remove-icon">
+                                                        <i class="fas fa-trash"></i>
+                                                    </div>
+                                                </span>
                                             </div>
                                         </div>
                                     </li>
@@ -249,67 +261,12 @@
                                                 <span class="header__cart-item-description">
                                                     Phân loại: Bạc
                                                 </span>
-                                                <span class="header__cart-item-remove">Xoá</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="header__cart-item">
-                                        <img src="https://img.tickid.vn/photos/resized/320x/83-1580888419-myphamohui-lgvina.png"
-                                            alt="" class="header__cart-img">
-                                        <div class="header__cart-item-info">
-                                            <div class="header__cart-item-head">
-                                                <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt Bộ kem đặc
-                                                    trị vùng mắt Bộ kem đặc trị vùng mắt Bộ kem đặc trị vùng mắt Bộ kem
-                                                    đặc trị vùng mắt</h5>
-                                                <div class="header__cart-item-price-wrap">
-                                                    <span class="header__cart-item-price">2.000.000đ</span>
-                                                    <span class="header__cart-item-multiply">x</span>
-                                                    <span class="header__cart-item-qnt">2</span>
-                                                </div>
-                                            </div>
-                                            <div class="header__cart-item-body">
-                                                <span class="header__cart-item-description">
-                                                    Phân loại: Bạc
+                                                <span class="header__cart-item-remove">
+                                                    <span class="hide-on-mobile-tablet">Xoá</span>
+                                                    <div class="header__cart-item-remove-icon">
+                                                        <i class="fas fa-trash"></i>
+                                                    </div>
                                                 </span>
-                                                <span class="header__cart-item-remove">Xoá</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="header__cart-item">
-                                        <img src="./assets/img/a4.jpg" alt="" class="header__cart-img">
-                                        <div class="header__cart-item-info">
-                                            <div class="header__cart-item-head">
-                                                <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
-                                                <div class="header__cart-item-price-wrap">
-                                                    <span class="header__cart-item-price">2.000.000đ</span>
-                                                    <span class="header__cart-item-multiply">x</span>
-                                                    <span class="header__cart-item-qnt">2</span>
-                                                </div>
-                                            </div>
-                                            <div class="header__cart-item-body">
-                                                <span class="header__cart-item-description">
-                                                    Phân loại: Bạc
-                                                </span>
-                                                <span class="header__cart-item-remove">Xoá</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="header__cart-item">
-                                        <img src="./assets/img/5.jpg" alt="" class="header__cart-img">
-                                        <div class="header__cart-item-info">
-                                            <div class="header__cart-item-head">
-                                                <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
-                                                <div class="header__cart-item-price-wrap">
-                                                    <span class="header__cart-item-price">2.000.000đ</span>
-                                                    <span class="header__cart-item-multiply">x</span>
-                                                    <span class="header__cart-item-qnt">2</span>
-                                                </div>
-                                            </div>
-                                            <div class="header__cart-item-body">
-                                                <span class="header__cart-item-description">
-                                                    Phân loại: Bạc
-                                                </span>
-                                                <span class="header__cart-item-remove">Xoá</span>
                                             </div>
                                         </div>
                                     </li>
@@ -324,7 +281,7 @@
         </header>
 
         <div class="app__container">
-            <div class="grid">
+            <div class="grid wide">
                 <div class="grid__row app__content">
                     <div class="grid__column-2">
                         <nav class="category">
@@ -345,7 +302,7 @@
                     </div>
 
                     <div class="grid__column-10">
-                        <div class="home-filter">
+                        <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter__label">Sắp xếp theo</span>
                             <button class="home-filter__btn btn">Phổ biến</button>
                             <button style="margin-left: 0;" class="home-filter__btn btn btn--primary">Mới nhất</button>
@@ -816,7 +773,7 @@
         </div>
 
         <footer class="footer">
-            <div class="grid">
+            <div class="grid wide">
                 <div class="grid__row">
                     <div class="grid__column-2-4">
                         <h3 class="footer__heading">Chăm sóc khách hàng</h3>
@@ -900,7 +857,7 @@
                 </div>
             </div>
             <div class="footer__bottom">
-                <div class="grid">
+                <div class="grid wide">
                     <p class="footer__text">© 2020 - Bản quyền thuộc về Công ty NguyenDucHuy</p>
                 </div>
             </div>
