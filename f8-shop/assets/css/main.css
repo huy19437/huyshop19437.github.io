@@ -492,6 +492,7 @@
 
 .header__mobile-search{
     padding: 0 12px;
+    display: none;
 }
 
 .header__mobile-search-icon{
@@ -516,6 +517,121 @@
 
 .header__search-checkbox:checked ~ .header__search{
     display: flex;
+}
+
+/* Mobile nav */
+.nav__bars-btn{
+    width: 28px;
+    height: 28px;
+    color: #fff;
+    display: none;
+}
+
+.nav__overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 3;
+}
+
+.nav__mobile{
+    position: fixed;
+    top: 0;
+    left: 0;;
+    bottom: 0;
+    width: 320px;
+    max-width: 100%;
+    background-color: #fff;
+    transform: translateX(-100%);
+    opacity: 0;   
+    transition: transform linear 0.2s, opav linear 0.2s;
+    z-index: 3;
+}
+
+.nav__mobile-list{
+    list-style: none;
+    margin-top: 24px;
+}
+
+.nav__mobile-link{
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 8px 0;
+    font-size: 1.4rem;
+}
+
+.nav__mobile-close{
+    font-size: 1.4rem;
+    color: #666;
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+    width: 19px;
+    height: 19px;
+}
+
+.nav__input:checked ~ .nav__overlay{
+    display: block;
+}
+
+.nav__input:checked ~ .nav__mobile{
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.nav__mobile-heading{
+    display: flex;
+    padding: 16px;
+    border-bottom: 1px solid rgb(207, 203, 203);
+}
+
+.nav__mobile-img{
+    width: 60px;
+    height: 60px;
+    margin-right: 16px;
+    border-radius: 50%;
+}
+
+.nav__mobile-name{
+    font-size: 1.6rem;
+}
+
+.nav__mobile-list{
+    padding-right: 70px;
+}
+
+.nav__mobile-item{
+    position: relative;
+}
+
+.nav__mobile-item:first-child::before{
+    display: none;
+}
+
+
+.nav__mobile-link{
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 16px 0;
+    text-transform: uppercase;
+}
+
+
+
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 
 /* Header Search */
@@ -948,17 +1064,7 @@
 
 .header__sort-item--active .header__sort-link{
     color: var(--primary-color);
-    /* border-bottom: 1px solid var(--primary-color); */
-}
-
-.header__sort-item--active::before{
-    content: "";
-    width: 66px;
-    position: absolute;
-    top: 91%;
-    left: 108px;
-    height: 4%;
-    background-color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .header__sort-price-control{
@@ -1059,6 +1165,10 @@
 }
 
 /* Mobile category */
+.mobile-category{
+    display: none;
+}
+
 .mobile-category__list{
     display: flex;
     list-style: none;
@@ -1105,6 +1215,7 @@
     font-weight: 300;
     user-select: none;
     -webkit-user-select: none;
+    padding: 0 7px;
     /* -webkit-tap-highlight-color: transparent; */
 }
 
