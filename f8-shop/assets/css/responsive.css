@@ -55,6 +55,13 @@
         width: 80px;
         text-align: right;
     }
+    .mobile-category{
+        display: block;
+    }
+    .nav__bars-btn{
+        display: block;
+        margin-right: 26px;
+    }
 }
 
 /* Mobile */
